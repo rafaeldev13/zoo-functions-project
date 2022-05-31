@@ -6,10 +6,7 @@ function getOldestFromFirstSpecies(id) {
   const getFirstAnimal = data.species.find((firstAnimal) => firstAnimal
     .id === employee.responsibleFor[0]);
   const getOlderAnimal = getFirstAnimal.residents.sort((x, y) => y.age - x.age)[0];
-  result.push(getOlderAnimal.name);
-  result.push(getOlderAnimal.sex);
-  result.push(getOlderAnimal.age);
+  result.push(getOlderAnimal.name, getOlderAnimal.sex, getOlderAnimal.age);
   return result;
 }
-
 module.exports = getOldestFromFirstSpecies;
